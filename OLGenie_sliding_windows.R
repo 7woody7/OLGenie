@@ -99,7 +99,6 @@ if(! is.na(ARGV[10])) {
 #PREPEND_TO_OUTPUT <- ''
 
 ### Read in the file
-#suppressMessages(codon_data <- read_tsv(file = CODON_RESULTS_FILE))
 codon_data <- as.data.frame(read_tsv(file = CODON_RESULTS_FILE))
 if(length(paste0(codon_data$frame, '_', codon_data$codon_num)) != unique(length(paste0(codon_data$frame, '_', codon_data$codon_num)))) {
   cat("\n\n### WARNING: there must only be results for ONE GENE PRODUCT PER FILE, i.e., a unique set of codons per frame.:\n")
